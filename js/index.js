@@ -29,13 +29,16 @@ function setUpContactOverlay() {
     overlay.classList.add("overlay");
     overlay.appendChild(formDocument.querySelector("#intake-form"));
 
-    const closeButton = overlay.querySelector(".form-submit-success__button");
-    if (closeButton) {
+    const closeButtons = overlay.querySelectorAll(
+      ".form-submit-success__button, .intake-form__cancel-button"
+    );
+
+    closeButtons.forEach(function(closeButton) {
       closeButton.addEventListener("click", function(e) {
         e.preventDefault();
         hideOverlay();
       });
-    }
+    });
 
     hideOverlay();
 

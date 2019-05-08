@@ -225,6 +225,20 @@ p {
 }
   }
 
+a {
+  font-weight: 900;
+  text-decoration: none
+}
+
+a,
+  a:visited {
+    color: #272838;
+  }
+
+a:hover {
+    text-decoration: underline;
+  }
+
 img {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -502,14 +516,8 @@ input:focus {
   display: flex;
   align-items: center;
   color: white;
-  text-decoration: none;
-
   margin-right: 30px
 }
-
-.ama__option:hover {
-    text-decoration: underline;
-  }
 
 .ama__option:last-child {
     margin-right: 0;
@@ -1648,8 +1656,18 @@ input:focus {
   padding: 30px;
 }
 
-.intake-form__submit-button {
+.intake-form__actions {
   margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a.intake-form__cancel-button {
+  color: #777;
+}
+
+.intake-form__submit-button {
 }
 
 /* FORM-SUBMIT-TRAP-IFRAME*/
