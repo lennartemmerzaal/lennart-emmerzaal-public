@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Personal Training — Lennart Emmerzaal</title>
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="/js/index.js"></script>
+  </head>
+  <body class="intake-form-page">
+    <div class="intake-form" id="intake-form">
+      <div class="intake-form__content">
+        <h1 class="intake-form__title js__hide-on-form-success">
+          Request Your FREE Intake
+        </h1>
+        <p class="intake-form__post-title js__hide-on-form-success">
+          Please send me your contact details and I will get in touch with you
+          to set up a free intake. No committment on your part is required!
+        </p>
+
+        <iframe
+          name="form-submit-trap-iframe"
+          id="form-submit-trap-iframe"
+          class="form-submit-trap-iframe"
+        ></iframe>
+
+        <form
+          id="contact-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdIHSLEdJG1GYjDgbjNjqpBfJ1ediT4SlawhRSn2L05R6h4Bw/formResponse"
+          method="POST"
+          class="js__hide-on-form-success"
+        >
+          <div class="form-field">
+            <label for="name">Your Name</label>
+            <input
+              id="name"
+              type="text"
+              autocomplete="off"
+              tabindex="0"
+              aria-label="Your Name"
+              name="entry.971179927"
+              value=""
+              required=""
+              dir="auto"
+              autofocus
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              type="text"
+              autocomplete="off"
+              tabindex="0"
+              aria-label="Your Email Address"
+              name="entry.978300160"
+              value=""
+              required=""
+              dir="auto"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="number">Phone number <span>(optional)</span></label>
+            <input
+              id="number"
+              type="text"
+              autocomplete="off"
+              tabindex="0"
+              aria-label="Your Phone Number (optional)"
+              name="entry.1970378409"
+              value=""
+              dir="auto"
+            />
+          </div>
+          <button type="submit" class="button intake-form__submit-button">
+            Request Your Intake
+            <img
+              src="/images/icons/arrow_forward-white.svg"
+              class="button__icon"
+            />
+          </button>
+        </form>
+
+        <div class="form-submit-success form-submit-success--hidden">
+          <h3 class="form-submit-success__title">Thank you!</h3>
+          <div class="post-title">
+            Your information has been submitted successfully. <br />
+            <strong>
+              I will get in touch with you shortly!
+            </strong>
+          </div>
+
+          <a href="/" class="button form-submit-success__button"
+            >Done
+            <img
+              src="/images/icons/arrow_forward-white.svg"
+              class="button__icon"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
