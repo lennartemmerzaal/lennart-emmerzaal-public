@@ -230,11 +230,6 @@ a {
   text-decoration: none
 }
 
-a,
-  a:visited {
-    color: #272838;
-  }
-
 a:hover {
     text-decoration: underline;
   }
@@ -518,6 +513,11 @@ input:focus {
   color: white;
   margin-right: 30px
 }
+
+.ama__option,
+  .ama__option:visited {
+    color: #272838;
+  }
 
 .ama__option:last-child {
     margin-right: 0;
