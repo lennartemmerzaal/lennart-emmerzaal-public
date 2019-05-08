@@ -294,8 +294,9 @@ input:focus {
 
 .hero {
     background-image: url("/images/optimized/hero mobile.jpg");
-    height: 70vh;
-    min-height: 350px
+    height: 55vh;
+    /* min-height: 350px;*/
+    min-height: auto
 }
 
     .hero:before {
