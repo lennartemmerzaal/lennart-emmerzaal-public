@@ -514,11 +514,6 @@ input:focus {
   margin-right: 30px
 }
 
-.ama__option,
-  .ama__option:visited {
-    color: #272838;
-  }
-
 .ama__option:last-child {
     margin-right: 0;
   }
