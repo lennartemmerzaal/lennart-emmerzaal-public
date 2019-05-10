@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
   animateAnchorClicks();
   setUpContactOverlay();
   trapContactFormSubmit();
+  animateHeroBackdrop(
+    document.querySelector(".hero__backdrop-container"),
+    9,
+    1
+  );
 });
 
 function animateAnchorClicks() {
@@ -102,4 +107,45 @@ function trapContactFormSubmit() {
       contactFormSubmitted = true;
     };
   }
+}
+
+function animateHeroBackdrop(
+  container,
+  totalBackgrounds,
+  currentBackgroundNumber
+) {
+  var nextBackgroundNumber = (currentBackgroundNumber % totalBackgrounds) + 1;
+
+  // Remove the (now invisible) exiting backdrop
+
+  var invisibleBackdrop = container.querySelector(
+    ".hero__backdrop.hero__backdrop--exiting"
+  );
+
+  if (invisibleBackdrop) {
+    invisibleBackdrop.parentNode.removeChild(invisibleBackdrop);
+  }
+
+  // Add the exiting class to the visible backdrop so that it will animate and disappear after a while
+
+  var visibleBackdrop = container.querySelector(
+    ".hero__backdrop:not(.hero__backdrop--exiting)"
+  );
+
+  visibleBackdrop.classList.add("hero__backdrop--exiting");
+
+  visibleBackdrop.addEventListener("animationend", function() {
+    // Once the animation is done, we run the same function again and increase the background number so that it keeps repeating with different images
+    animateHeroBackdrop(container, totalBackgrounds, nextBackgroundNumber);
+  });
+
+  // We create the new backdrop that will become visible once the exiting one has disappeared
+
+  var newBackdrop = document.createElement("div");
+
+  newBackdrop.classList.add("hero__backdrop");
+  newBackdrop.style.backgroundImage =
+    'url("/images/photography/hero desktop/' + nextBackgroundNumber + '.jpg")';
+
+  container.appendChild(newBackdrop);
 }

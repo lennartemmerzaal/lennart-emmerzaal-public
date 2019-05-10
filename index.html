@@ -6,8 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Personal Training — Lennart Emmerzaal</title>
     <link rel="stylesheet" href="./style/index.css" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
     <script src="/js/index.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-139953105-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-139953105-1");
+    </script>
   </head>
   <body>
     <section class="hero">
@@ -33,11 +46,14 @@
           </a>
         </div>
       </div>
+      <div class="hero__backdrop-container">
+        <div class="hero__backdrop"></div>
+      </div>
     </section>
     <main class="intro">
       <aside class="intro__visual">
         <img
-          src="images/optimized/intro photo.jpg"
+          src="images/photography/intro photo.jpg"
           alt=""
           class="intro__photo"
         />
@@ -177,17 +193,17 @@
       <div class="approach__cta">
         <div class="approach__cta-photostrip">
           <img
-            src="images/optimized/approach photo 1.jpg"
+            src="images/photography/approach photo 1.jpg"
             alt=""
             class="approach__cta-photostrip-photo"
           />
           <img
-            src="images/optimized/approach photo 2.jpg"
+            src="images/photography/approach photo 2.jpg"
             alt=""
             class="approach__cta-photostrip-photo"
           />
           <img
-            src="images/optimized/approach photo 3.jpg"
+            src="images/photography/approach photo 3.jpg"
             alt=""
             class="approach__cta-photostrip-photo"
           />
@@ -211,7 +227,7 @@
     <section class="about">
       <div class="about__bio">
         <img
-          src="images/optimized/about photo.jpg"
+          src="images/photography/about photo.jpg"
           alt=""
           class="about__bio-photo"
         />

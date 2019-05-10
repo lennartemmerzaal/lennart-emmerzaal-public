@@ -258,26 +258,29 @@ input:focus{
 .hero{
   height:95vh;
   min-height:650px;
-  background-color:#e8e8e8;
-  background-image:url("/images/optimized/hero desktop.jpg");
-  background-size:cover;
-  background-repeat:no-repeat;
-  position:relative
+  position:relative;
+  background-color:#e8e8e8
 }
 
 .hero:before{
     content:"";
     position:absolute;
+    z-index:1;
     bottom:0;
     left:0;
     border-left:100vw solid transparent;
     border-bottom:100px solid white;
   }
 
+.hero{
+}
+
 @media only screen and (max-width: 715px){
 
 .hero{
-    background-image:url("/images/optimized/hero mobile.jpg");
+    background-image:url("/images/photography/hero mobile.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
     height:55vh;
     min-height:auto
 }
@@ -287,15 +290,10 @@ input:focus{
     }
   }
 
-@media only screen and (max-width: 610px){
-
-.hero{
-}
-  }
-
 .hero__logo-container{
   background-color:white;
   position:absolute;
+  z-index:1;
   -webkit-transform:rotate(-2deg);
           transform:rotate(-2deg);
   left:-25px;
@@ -350,6 +348,7 @@ input:focus{
 
 .hero__blurb-container{
   position:absolute;
+  z-index:1;
   right:32px;
   bottom:0;
   width:650px;
@@ -444,6 +443,67 @@ input:focus{
     z-index:1
 }
   }
+
+.hero__backdrop-container{
+  position:absolute;
+  z-index:0;
+
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+
+  overflow:hidden;
+}
+
+.hero__backdrop{
+  position:absolute;
+
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-image:url("/images/photography/hero desktop/1.jpg")
+}
+
+@media only screen and (max-width: 715px){
+
+.hero__backdrop{
+    display:none
+}
+  }
+
+@-webkit-keyframes exit{
+  0%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:0;
+  }
+}
+
+@keyframes exit{
+  0%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:0;
+  }
+}
+
+.hero__backdrop--exiting{
+  z-index:2;
+  -webkit-animation:exit 2s cubic-bezier(0.4, 0, 1, 1)
+    3s both;
+          animation:exit 2s cubic-bezier(0.4, 0, 1, 1)
+    3s both;
+}
 
 .ama{
   font-size:22px;
@@ -1417,7 +1477,7 @@ input:focus{
       #272838 180px,
       rgba(39, 40, 56, 0.6) 332px
     ),
-    url("/images/optimized/end photo.jpg");
+    url("/images/photography/end photo.jpg");
 
   background-size:auto, cover;
 
