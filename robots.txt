@@ -1,4 +1,4 @@
 # robots.txt 
 User-agent: *
-Disallow: 
+Disallow: /cdn-cgi/l/email-protection/
 Sitemap: https://lennartemmerzaal.com/sitemap.xml
