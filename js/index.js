@@ -7,6 +7,29 @@ document.addEventListener("DOMContentLoaded", function() {
     9,
     1
   );
+
+  // Set up cookie consent
+  if (typeof window.CookieConsent !== "undefined") {
+    setTimeout(
+      () =>
+        new CookieConsent({
+          palette: {
+            popup: {
+              background: "#272838",
+              text: "#fff",
+            },
+            button: {
+              background: "rgba(255, 255, 255, .08)",
+              text: "#fff",
+            },
+          },
+          theme: "edgeless",
+          position: "top",
+          static: true,
+        }),
+      2000
+    );
+  }
 });
 
 function animateAnchorClicks() {

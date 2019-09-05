@@ -154,7 +154,7 @@ body{
   flex-direction:column;
   color:#272838;
 
-  font:20px/1.4 "Public Sans", -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
+  font:20px / 1.4 "Public Sans", -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
   Ubuntu, Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial,
   sans-serif;
   background-color:white
@@ -259,7 +259,8 @@ input:focus{
   height:95vh;
   min-height:650px;
   position:relative;
-  background-color:#e8e8e8
+  background-color:#e8e8e8;
+  transition:height 300ms ease
 }
 
 .hero:before{
@@ -1705,3 +1706,51 @@ a.intake-form__cancel-button{
   justify-content:center;
   align-items:center;
 }
+
+.cc-grower{
+  position:relative;
+  z-index:2;
+  transition-duration:300ms !important
+}
+
+.cc-grower:not([style=""]){
+  }
+
+.cc-grower:not([style=""]) + .hero{
+      height:calc(95vh - 51px) !important
+    }
+
+@media only screen and (max-width: 715px){
+
+.cc-grower:not([style=""]) + .hero{
+        height:calc(55vh - 134px) !important
+    }
+      }
+
+.cc-window{
+  opacity:1 !important;
+}
+
+.cc-window *{
+    font-family:"Public Sans", -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
+  Ubuntu, Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial,
+  sans-serif;
+  }
+
+.cc-window .cc-message{
+    line-height:1.4;
+  }
+
+.cc-window.cc-floating.cc-theme-edgeless .cc-message{
+    margin:1em 1.5em;
+  }
+
+.cc-window .cc-link{
+    padding:0;
+    text-decoration:none;
+    opacity:1
+  }
+
+.cc-window .cc-link:hover{
+      text-decoration:underline;
+    }
