@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
               text: "#fff",
             },
           },
+          cookie: { domain: ".lennartemmerzaal.com" },
           theme: "edgeless",
           position: "top",
           static: true,
