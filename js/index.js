@@ -80,9 +80,14 @@ function setUpContactOverlay() {
       .forEach(function(link) {
         link.addEventListener("click", function(e) {
           e.preventDefault();
-          overlay.style.display = null;
+          showOverlay();
         });
       });
+
+    function showOverlay() {
+      overlay.style.display = null;
+      overlay.querySelector("[autofocus]").focus(); // Gets autofocus working in iOS Safari and Firefox
+    }
 
     function hideOverlay() {
       overlay.style.display = "none";
