@@ -1,4 +1,7 @@
 # robots.txt 
 User-agent: *
 Disallow: /cdn-cgi/l/email-protection/
+Disallow: /images/signature.svg
+Disallow: /images/logo-offset-white.svg
+Disallow: /images/logo.svg
 Sitemap: https://lennartemmerzaal.com/sitemap.xml
