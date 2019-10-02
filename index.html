@@ -9,25 +9,36 @@
       name="description"
       content="Lennart Emmerzaal is a Personal Trainer specialized in Weight Loss, Muscle Growth and Posture Correction and operating at Vondelgym in Amsterdam. Sign up for a Free Intake!"
     />
+    <meta
+      name="keywords"
+      content="personal trainer,amsterdam,vondelgym,training,weight loss,muscle growth,posture correction,fitness plan,gym trainer,fitness,weight training,coaching,free intake"
+    />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="./style/index.css" />
     <script src="/js/index.js"></script>
     <script src="/js/cookieconsent.min.js"></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-139953105-1"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-139953105-1");
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MBVVD8T");
     </script>
   </head>
   <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBVVD8T"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
     <section class="hero">
       <div class="hero__logo-container">
         <img
