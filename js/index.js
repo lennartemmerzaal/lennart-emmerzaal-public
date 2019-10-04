@@ -143,6 +143,8 @@ function animateHeroBackdrop(
   totalBackgrounds,
   currentBackgroundNumber
 ) {
+  if (container == null) return;
+
   var nextBackgroundNumber = (currentBackgroundNumber % totalBackgrounds) + 1;
 
   // Remove the (now invisible) exiting backdrop
