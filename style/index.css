@@ -1801,6 +1801,15 @@ ol.list{
     margin-right:20px;
   }
 
+@media only screen and (max-width: 610px){
+
+.footer__lower{
+    margin-top:20px;
+    flex-direction:column;
+    align-items:flex-start
+}
+  }
+
 .footer__attribution-blurb{
   position:absolute;
   right:0;
@@ -2540,3 +2549,7 @@ a.intake-form__cancel-button{
     width:100%;
     max-width:500px;
   }
+
+.js__phone-number{
+  display:none;
+}

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   animateAnchorClicks();
   setUpContactOverlay();
   trapContactFormSubmit();
+  displayPhoneNumber();
   animateHeroBackdrop(
     document.querySelector(".hero__backdrop-container--animated"),
     9,
@@ -37,7 +38,7 @@ function animateAnchorClicks() {
   document.querySelectorAll("a").forEach(function (link) {
     var href = link.getAttribute("href");
 
-    if (href[0] === "#") {
+    if (href.length > 1 && href[0] === "#") {
       var target = document.querySelector(link.getAttribute("href"));
 
       link.addEventListener("click", function (e) {
@@ -179,4 +180,14 @@ function animateHeroBackdrop(
     'url("/images/photography/hero index/' + nextBackgroundNumber + '.jpg")';
 
   container.appendChild(newBackdrop);
+}
+
+function displayPhoneNumber() {
+  // Just so we don't include the phone number in plain text on the site. This won't prevent all spam, just the most basic level of spam.
+  const number = atob("KzMxIDYgMjAwNTExNzM=");
+  document.querySelectorAll("a.js__phone-number").forEach((el) => {
+    el.textContent = `Phone: ${number}`;
+    el.href = `tel:${number.replace(/ /g, "")}`;
+    el.style.display = "inline";
+  });
 }
