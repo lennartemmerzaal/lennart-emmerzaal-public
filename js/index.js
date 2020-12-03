@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   animateAnchorClicks();
   setUpContactOverlay();
   trapContactFormSubmit();
   animateHeroBackdrop(
-    document.querySelector(".hero__backdrop-container"),
+    document.querySelector(".hero__backdrop-container--animated"),
     9,
     1
   );
@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function animateAnchorClicks() {
-  document.querySelectorAll("a").forEach(function(link) {
+  document.querySelectorAll("a").forEach(function (link) {
     var href = link.getAttribute("href");
 
     if (href[0] === "#") {
       var target = document.querySelector(link.getAttribute("href"));
 
-      link.addEventListener("click", function(e) {
+      link.addEventListener("click", function (e) {
         e.preventDefault();
 
         target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -52,7 +52,7 @@ function animateAnchorClicks() {
 function setUpContactOverlay() {
   var INTAKE_PAGE_PATH = "/intake.html";
 
-  loadContactForm(INTAKE_PAGE_PATH, function(formDocument) {
+  loadContactForm(INTAKE_PAGE_PATH, function (formDocument) {
     const overlay = document.createElement("div");
 
     overlay.classList.add("overlay");
@@ -62,8 +62,8 @@ function setUpContactOverlay() {
       ".form-submit-success__button, .intake-form__cancel-button"
     );
 
-    closeButtons.forEach(function(closeButton) {
-      closeButton.addEventListener("click", function(e) {
+    closeButtons.forEach(function (closeButton) {
+      closeButton.addEventListener("click", function (e) {
         e.preventDefault();
         hideOverlay();
       });
@@ -77,8 +77,8 @@ function setUpContactOverlay() {
 
     document
       .querySelectorAll("a[href='" + INTAKE_PAGE_PATH + "']")
-      .forEach(function(link) {
-        link.addEventListener("click", function(e) {
+      .forEach(function (link) {
+        link.addEventListener("click", function (e) {
           e.preventDefault();
           showOverlay();
         });
@@ -98,7 +98,7 @@ function setUpContactOverlay() {
 function loadContactForm(path, callback) {
   var xhr = new XMLHttpRequest();
 
-  xhr.addEventListener("load", function() {
+  xhr.addEventListener("load", function () {
     callback(this.responseXML);
   });
 
@@ -122,9 +122,9 @@ function trapContactFormSubmit() {
   if (form && trap) {
     form.target = "form-submit-trap-iframe";
 
-    trap.onload = function() {
+    trap.onload = function () {
       if (contactFormSubmitted && successMessage) {
-        hideOnFormSuccess.forEach(function(el) {
+        hideOnFormSuccess.forEach(function (el) {
           el.style.display = "none";
         });
 
@@ -132,7 +132,7 @@ function trapContactFormSubmit() {
       }
     };
 
-    form.onsubmit = function(e) {
+    form.onsubmit = function (e) {
       contactFormSubmitted = true;
     };
   }
@@ -165,7 +165,7 @@ function animateHeroBackdrop(
 
   visibleBackdrop.classList.add("hero__backdrop--exiting");
 
-  visibleBackdrop.addEventListener("animationend", function() {
+  visibleBackdrop.addEventListener("animationend", function () {
     // Once the animation is done, we run the same function again and increase the background number so that it keeps repeating with different images
     animateHeroBackdrop(container, totalBackgrounds, nextBackgroundNumber);
   });
@@ -176,7 +176,7 @@ function animateHeroBackdrop(
 
   newBackdrop.classList.add("hero__backdrop");
   newBackdrop.style.backgroundImage =
-    'url("/images/photography/hero desktop/' + nextBackgroundNumber + '.jpg")';
+    'url("/images/photography/hero index/' + nextBackgroundNumber + '.jpg")';
 
   container.appendChild(newBackdrop);
 }

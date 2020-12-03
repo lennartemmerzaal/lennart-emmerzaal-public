@@ -14,7 +14,7 @@
       content="personal trainer,amsterdam,vondelgym,training,weight loss,muscle growth,posture correction,fitness plan,gym trainer,fitness,weight training,coaching,free intake"
     />
     <script>
-      (function(w, d, s, l, i) {
+      (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
@@ -36,17 +36,17 @@
         src="https://www.googletagmanager.com/ns.html?id=GTM-MBVVD8T"
         height="0"
         width="0"
-        style="display:none;visibility:hidden"
+        style="display: none; visibility: hidden;"
       ></iframe
     ></noscript>
     <section class="hero">
-      <div class="hero__logo-container">
+      <a class="hero__logo-container" href="/">
         <img
           alt="Lennart Emmerzaal"
           src="/images/logo.svg"
           class="hero__logo"
         />
-      </div>
+      </a>
       <div class="hero__blurb-container">
         <div class="hero__blurb-content">
           <div class="hero__blurb-preamble">Get ready to</div>
@@ -62,7 +62,20 @@
           </a>
         </div>
       </div>
-      <div class="hero__backdrop-container">
+      <div class="hero__nav-container">
+        <div class="hero__nav-item hero__nav-item--current">
+          <a href="/">
+            <img src="/images/icons/home-white.svg" alt="Home" />
+          </a>
+        </div>
+        <div class="hero__nav-item">
+          <a href="/in-person-training.html">In-person training</a>
+        </div>
+        <div class="hero__nav-item">
+          <a href="/online-training.html">Online training</a>
+        </div>
+      </div>
+      <div class="hero__backdrop-container hero__backdrop-container--animated">
         <div class="hero__backdrop"></div>
       </div>
     </section>
@@ -235,7 +248,10 @@
           <div class="approach__cta-button-container">
             <a href="/intake.html" class="button button--inverted">
               Get Your FREE Intake
-              <img src="/images/icons/arrow_forward.svg" class="button__icon" />
+              <img
+                src="/images/icons/arrow_forward-dark_blue.svg"
+                class="button__icon"
+              />
             </a>
             <div class="approach__cta-button-subtext">
               No committment required
@@ -287,15 +303,11 @@
       <div class="about__benefits">
         <h2 class="about__benefits-title">The benefits of training with me</h2>
         <div class="about__benefits-container">
-          <div class="about__benefit">
-            <img
-              src="/images/icons/language.svg"
-              alt=""
-              class="about__benefit-icon"
-            />
-            <div class="about__benefit-content">
-              <div class="about__benefit-title">Always<br />connected</div>
-              <div class="about__benefit-description">
+          <div class="benefit">
+            <img src="/images/icons/language.svg" alt="" class="benefit-icon" />
+            <div class="benefit-content">
+              <div class="benefit-title">Always<br />connected</div>
+              <div class="benefit-description">
                 <p>
                   <strong>Never hesitate to ask me anything,</strong> whether
                   it’s during weekends, evenings, holidays or business trips.
@@ -307,17 +319,11 @@
               </div>
             </div>
           </div>
-          <div class="about__benefit">
-            <img
-              src="/images/icons/poll.svg"
-              alt=""
-              class="about__benefit-icon"
-            />
-            <div class="about__benefit-content">
-              <div class="about__benefit-title">
-                Results at your<br />fingertips
-              </div>
-              <div class="about__benefit-description">
+          <div class="benefit">
+            <img src="/images/icons/poll.svg" alt="" class="benefit-icon" />
+            <div class="benefit-content">
+              <div class="benefit-title">Results at your<br />fingertips</div>
+              <div class="benefit-description">
                 <p>
                   While training, we’ll
                   <strong>gather as much data as possible</strong> to shape your
@@ -331,17 +337,11 @@
               </div>
             </div>
           </div>
-          <div class="about__benefit">
-            <img
-              src="/images/icons/search.svg"
-              alt=""
-              class="about__benefit-icon"
-            />
-            <div class="about__benefit-content">
-              <div class="about__benefit-title">
-                Evidence-based<br />training
-              </div>
-              <div class="about__benefit-description">
+          <div class="benefit">
+            <img src="/images/icons/search.svg" alt="" class="benefit-icon" />
+            <div class="benefit-content">
+              <div class="benefit-title">Evidence-based<br />training</div>
+              <div class="benefit-description">
                 <p>
                   We’ll follow a <strong>no-nonsense</strong> and
                   <strong>evidence-based method</strong> that’ll let you unlock
@@ -417,7 +417,7 @@
         </div>
       </div>
       <div class="footer__lower">
-        <span>&copy; 2019 Lennart Emmerzaal, All Rights Reserved.</span>
+        <span>&copy; 2020 Lennart Emmerzaal, All Rights Reserved.</span>
         <a href="/terms.html">Terms of Service & Privacy Policy</a>
       </div>
     </footer>
