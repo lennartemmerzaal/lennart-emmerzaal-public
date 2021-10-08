@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // Set up cookie consent
-  if (typeof window.CookieConsent !== "undefined") {
+  if (
+    typeof window.CookieConsent !== "undefined" &&
+    location.hostname === "lennartemmerzaal.com"
+  ) {
     setTimeout(
       () =>
         new CookieConsent({

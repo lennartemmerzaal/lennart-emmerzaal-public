@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pallet-green</title>
+    <g id="Other-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Online-Training" transform="translate(-741.000000, -1573.000000)">
+            <g id="content" transform="translate(-244.000000, 1090.000000)">
+                <g id="advantages" transform="translate(341.000000, 483.000000)">
+                    <g id="pallet-green" transform="translate(644.000000, 0.000000)">
+                        <polygon id="Path" points="0 0 48 0 48 48 0 48"></polygon>
+                        <path d="M36,18 L33.18,15.16 L20,28.34 L14.82,23.18 L12,26 L20,34 L36,18 Z M38,6 L29.64,6 C28.8,3.68 26.6,2 24,2 C21.4,2 19.2,3.68 18.36,6 L10,6 C9.72,6 9.46,6.02 9.2,6.08 C8.42,6.24 7.72,6.64 7.18,7.18 C6.82,7.54 6.52,7.98 6.32,8.46 C6.12,8.92 6,9.44 6,10 L6,38 C6,38.54 6.12,39.08 6.32,39.56 C6.52,40.04 6.82,40.46 7.18,40.84 C7.72,41.38 8.42,41.78 9.2,41.94 C9.46,41.98 9.72,42 10,42 L38,42 C40.2,42 42,40.2 42,38 L42,10 C42,7.8 40.2,6 38,6 Z M24,5.5 C24.82,5.5 25.5,6.18 25.5,7 C25.5,7.82 24.82,8.5 24,8.5 C23.18,8.5 22.5,7.82 22.5,7 C22.5,6.18 23.18,5.5 24,5.5 Z M38,38 L10,38 L10,10 L38,10 L38,38 Z" id="Shape" fill="#43AA8B" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
